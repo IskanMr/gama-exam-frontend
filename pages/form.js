@@ -11,17 +11,17 @@ import {
   import RegisterForm from "../components/registerForm"
 
   const form = () => {
-      return ( <Box bg="white" w="495px" p={3} rounded="md" boxShadow="sm">
-      <Tabs isFitted variant="enclosed-colored" m={4} p={0}>
+      return ( <Box bg="white" w="450px" rounded="md" boxShadow="sm">
+      <Tabs isFitted variant="enclosed-colored">
         <TabList>
-          <Tab>
+          <Tab fontSize={2.5}>
             <Text fontSize="2xl">Daftar</Text>
           </Tab>
-          <Tab>
+          <Tab fontSize={2.5}>
             <Text fontSize="2xl">Masuk</Text>
           </Tab>
         </TabList>
-        <TabPanels>
+        <TabPanels p={3}>
           <TabPanel>
             <RegisterForm />
           </TabPanel>

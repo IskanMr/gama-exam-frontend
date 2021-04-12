@@ -12,9 +12,14 @@ import {
   Box,
   Spacer,
   LinkBox,
+  InputRightElement,
 } from "@chakra-ui/react"
+import React from "react"
 
 const RegisterForm = () => {
+
+  const [show, setShow] = React.useState(false)
+  const handleClick = () => setShow(!show)
     return (
         <form action='submit'>
             <Stack spacing={3}>
@@ -22,7 +27,6 @@ const RegisterForm = () => {
           <InputGroup>
             <InputLeftElement children={<BellIcon />} />
             <Input
-              fontSize="lg"
               type="userName"
               placeholder="Username"
               aria-lable="Username"
@@ -33,7 +37,6 @@ const RegisterForm = () => {
           <InputGroup>
             <InputLeftElement children={<EmailIcon />} />
             <Input
-              fontSize="lg"
               type="email"
               placeholder="Email"
               aria-lable="Email"
@@ -44,11 +47,15 @@ const RegisterForm = () => {
           <InputGroup>
             <InputLeftElement children={<LockIcon />} />
             <Input
-              fontSize="lg"
-              type="password"
+              type={show ? "text" : "password"}
               placeholder="Password"
               aria-lable="Password"
             />
+             <InputRightElement width="4.5rem">
+        <Button h="1.75rem" size="sm" onClick={handleClick}>
+          {show ? "Hide" : "Show"}
+        </Button>
+      </InputRightElement>
           </InputGroup>
         <Flex direction="row-reverse" mt={3}>
           <Button
