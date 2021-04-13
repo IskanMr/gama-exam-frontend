@@ -22,9 +22,9 @@ const TestList = () => {
                     </VStack>
                 </Flex>
             </Flex>
-            <Flex direction='column' ml='5rem' mt='3.5rem'>
+            <Flex direction='column' ml='5rem' mt='3rem'>
                 <AdminOpt/>
-                <Filter mt='2rem' />
+                <Filter></Filter>
             </Flex>
         </Flex>
      );

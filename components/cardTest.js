@@ -9,7 +9,6 @@ const cardTest = () => {
                     <Text className='testTime' flex='1'>120 menit</Text>
                     <Button className='testEnter' width='10rem' mr='2rem'>Masuk Test</Button>
                 </Flex>
-
             </Flex>
      );
 }
