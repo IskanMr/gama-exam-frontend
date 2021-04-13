@@ -2,7 +2,7 @@ import { Stack, CheckboxGroup, Checkbox, Text } from "@chakra-ui/react"
 
 const Filter = () => {
     return (
-        <Stack mt='2rem'>
+        <Stack mt='2rem' width='100%'>
             <Text fontWeight='bold'>FILTER</Text>
             <CheckboxGroup>
                 <Checkbox value='soshum'>Sosial Hukum</Checkbox>

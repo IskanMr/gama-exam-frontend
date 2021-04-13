@@ -1,11 +1,15 @@
 import CardTest from "../components/cardTest"
 import AdminOpt from "../components/adminOpt"
 import Filter from "../components/filter"
-import { Flex, Spacer, Text, VStack } from "@chakra-ui/react";
+import { Flex, Text, VStack } from "@chakra-ui/react";
 
 const TestList = () => {
     return (
-        <Flex width='80%'>
+        <Flex direction='column'>
+        <Flex mb={10}>
+            <Text fontSize='4xl' fontWeight='semibold'>Daftar Test</Text>
+        </Flex>
+        <Flex width='100%'>
             <Flex direction='column' spacing='2rem'>
                 <Flex direction='column'>
                     <Text fontSize='3xl' fontWeight='bold'>Test Aktif</Text>
@@ -26,6 +30,7 @@ const TestList = () => {
                 <AdminOpt/>
                 <Filter></Filter>
             </Flex>
+        </Flex>
         </Flex>
      );
 }
